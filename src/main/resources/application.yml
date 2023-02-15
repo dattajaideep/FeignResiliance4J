@@ -1,0 +1,9 @@
+server:
+  port:8091
+resilience4j.circuitbreaker:
+  instances:
+    student-service:
+      registerHealthIndicator: true
+      slidingWindowSize: 10
+      permittedNumberOdCallsInHalfOpenState: 3
+      slidingWindowType: TIME_BASED
